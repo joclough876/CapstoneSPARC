@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html xmlns:th="thymeleaf.org">
+
+ 
+	<head>
+		<meta charset="ISO-8859-1">
+		<title th:text="${add} ? 'Create an Employee' : 'Edit an Employee'"/>
+	</head>
+	<body>
+ 
+		<h1 th:text="${add} ? 'Create an Employee' : 'Edit an Employee'"/>
+		<br/><br/>
+		<form th:action="${add} ? @{/employees/add} : @{/employees/{employeeId}/edit(employeeId=${employee.id})}"
+		      th:object="${employee}" method="POST">
+	      <table border="0">
+	          <tr th:if="${employee.eid}">
+	              <td>ID</td>
+	              <td>:</td>
+	              <td th:utext="${employee.eid}">...</td>             
+	          </tr>
+               <tr>
+                   <td>First Name</td>
+                   <td>:</td>
+                   <td><input type="text" th:field="*{efirst_name}" /></td>              
+               </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>:</td>
+                    <td><input type="text" th:field="*{elast_name}" /></td>              
+                </tr>
+                <tr>
+                    <td>Job Code</td>
+                    <td>:</td>
+                    <td><input type="text" th:field="*{job_code}" /></td>              
+                </tr>
+                	          <tr>
+	              <td>Department</td>
+	              <td>:</td>
+	              <td><input type="text" th:field="*{currentd_id}"/></td>             
+	          </tr>
+               <tr>
+                   <td>User ID</td>
+                   <td>:</td>rs
+                   <td><input type="text" th:field="*{e_userid}" /></td>              
+               </tr>
+                <tr>
+                    <td>Manager?</td>
+                    <td>:</td>
+                    <td><input type="text" th:field="*{is_manager}" /></td>              
+                </tr>
+                <tr>
+                    <td>Sponsor</td>
+                    <td>:</td>
+                    <td><input type="text" th:field="*{is_sponsor}" /></td>              
+                </tr>
+                 <tr>
+                    <td>Supervisor?</td>
+                    <td>:</td>
+                    <td><input type="text" th:field="*{is_supervisor}" /></td>              
+                </tr>
+            </table>
+            <input type="submit" th:value="${add} ? 'Add' : 'Update'" />
+		</form>
+		<br/>
+     
+        <div th:if="${errorMessage}" th:utext="${errorMessage}" class="error" />   
+        
+	</body>
+</html>

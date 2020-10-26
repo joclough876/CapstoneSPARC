@@ -1,0 +1,762 @@
+
+.bd-input {
+
+    border-bottom: 1px solid #a2aaad;
+
+}
+
+ 
+
+.bd-label {
+
+    border-bottom: 1px solid #a2aaad;
+
+    border-right: 1px solid #a2aaad;
+
+}
+
+ 
+
+.bd-label-2 {
+
+    border-right: 1px solid #a2aaad;
+
+}
+
+ 
+
+.bg-arvestAltBlue {
+
+    background-color: #00457c;
+
+}
+
+ 
+
+.bg-arvestAltGray{
+
+    background-color: #5c6568;
+
+}
+
+ 
+
+.bg-arvestAltTan {
+
+    background-color: #f0ede6;
+
+}
+
+ 
+
+.bg-arvestBlue {
+
+    background-color: #002c5c;
+
+}
+
+ 
+
+.bg-arvestGray {
+
+    background-color: #a2aaad;
+
+}
+
+ 
+
+.bg-arvestGreen{
+
+    background-color: #109648;
+
+}
+
+ 
+
+.bg-arvestRed {
+
+    background-color: #e60000;
+
+}
+
+ 
+
+.bg-arvestTan {
+
+    background-color: #d2c8b3;
+
+}
+
+ 
+
+.bg-arvestYellow{
+
+    background-color: #f1c40f;
+
+}
+
+ 
+
+.blurb h2 {
+
+    color:#002855;
+
+    font-weight:100;
+
+    font-size: 2.5rem;
+
+}
+
+ 
+
+.blurb p {
+
+    color: #484848;
+
+    font-weight: 100;
+
+    font-size: 1.123rem;
+
+    line-height: 2;
+
+}
+
+ 
+
+.btn-arvestBlue {
+
+    color: #fff;
+
+    background-color: #002c5c;
+
+    border-color: #002c5c;
+
+}
+
+ 
+
+.btn-arvestBlue:hover {
+
+    color: #fff;
+
+    background-color: #e60000;
+
+    border: 1px solid #e60000;
+
+}
+
+ 
+
+.collapseField {
+
+    display: none;
+
+    transition: all 0.6s;
+
+}
+
+.content {
+
+    padding-top: 100px;
+
+    margin-bottom: 50px;
+
+}
+
+ 
+
+.display-5 {
+
+    font-size: 1.75rem;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+}
+
+ 
+
+.display-6 {
+
+    font-size: 1.25rem;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+}
+
+ 
+
+.expandField {
+
+    display: block;
+
+}
+
+ 
+
+.fixed-top-2 {
+
+    position: fixed;
+
+    top: 0;
+
+    right: 0;
+
+    left: 0;
+
+    z-index: 1029;
+
+    margin-top: 45px;
+
+}
+
+ 
+
+.formTitle{
+
+    margin-top: 90px;
+
+}
+
+ 
+
+.fMargin {
+
+    margin-left: 140px !important;
+
+}
+
+ 
+
+.font-arvestAltBlue {
+
+    color: #00457c;
+
+}
+
+ 
+
+.font-arvestAltGray{
+
+    color: #5c6568;
+
+}
+
+ 
+
+.font-arvestAltTan {
+
+    color: #f0ede6;
+
+}
+
+ 
+
+.font-arvestBlue {
+
+    color: #002c5c;
+
+}
+
+ 
+
+.font-arvestGray {
+
+    color: #a2aaad;
+
+}
+
+ 
+
+.font-arvestGreen{
+
+    color: #109648;
+
+}
+
+ 
+
+.font-arvestRed {
+
+    color: #e60000;
+
+}
+
+ 
+
+.font-arvestTan {
+
+    color: #d2c8b3;
+
+}
+
+ 
+
+.font-arvestYellow{
+
+    color: #f1c40f;
+
+}
+
+ 
+
+.forms {
+
+    width: 100px;
+
+    height: 100px;
+
+    transition: 500ms;
+
+}
+
+ 
+
+.h6-underline {
+
+    text-decoration: underline;
+
+}
+
+ 
+
+.jumbotron {
+
+    background: url("https://max.arvest.com/dt/RBO/ias/request/PublishingImages/greyGrid.png");
+
+}
+
+ 
+
+.navbar-border {
+
+    border-bottom-color: #ff0000;
+
+    border-style: solid;
+
+    border-bottom-width: 2px;
+
+}
+
+ 
+
+.navbar.scrolled {
+
+    background: #002855;
+
+    border-bottom: 2px solid #ff0000;
+
+    transition: 500ms;
+
+}
+
+ 
+
+ 
+
+@media (max-width: 1200px) {
+
+    #headingGroup h1 {
+
+        font-weight: 100;
+
+        font-size: 3rem;
+
+    }
+
+ 
+
+    .blurb h2 {
+
+        font-size: 2rem;
+
+    }
+
+}
+
+ 
+
+ 
+
+ 
+
+ 
+
+/*---Horizontal Row Styles---*/
+
+/* Gradient transparent - color - transparent */
+
+hr.style-one {
+
+    border: 0;
+
+    height: 1px;
+
+    background-image: linear-gradient(to right, rgba(92,101,104,0), rgba(92,101,104,0.75), rgba(92,101,104,0));
+
+}
+
+ 
+
+ 
+
+/* Single down Direction Flaired edge, by Michael Watson */
+
+hr.style-two {
+
+    overflow: visible; /* For IE */
+
+    height: 30px;
+
+    border-style: solid;
+
+    border-color: #5c6568;
+
+    border-width: 1px 0 0 0;
+
+    border-radius: 20px;
+
+}
+
+ 
+
+    hr.style-two:before { /* Not really supposed to work, but does */
+
+        display: block;
+
+        content: "";
+
+        height: 30px;
+
+        margin-top: -2px;
+
+        border-style: solid;
+
+        border-color: #5c6568;
+
+        border-width: 1px 0 0 0;
+
+        border-radius: 20px;
+
+    }
+
+ 
+
+/* Flaired edges, by Tomas Theunissen */
+
+hr.style-three {
+
+    overflow: visible; /* For IE */
+
+    height: 30px;
+
+    border-style: solid;
+
+    border-color: #5c6568;
+
+    border-width: 1px 0 0 0;
+
+    border-radius: 20px;
+
+}
+
+ 
+
+    hr.style-three:before {
+
+        display: block;
+
+        content: "";
+
+        height: 30px;
+
+        margin-top: -31px;
+
+        border-style: solid;
+
+        border-color: #5c6568;
+
+        border-width: 0 0 1px 0;
+
+        border-radius: 20px;
+
+    }
+
+ 
+
+/* Single up Direction Flaired edge, by Michael Watson */
+
+hr.style-four {
+
+    overflow: visible; /* For IE */
+
+    height: 30px;
+
+    border-style: solid;
+
+    border-color: #5c6568;
+
+    border-width: 0 0 1px 0;
+
+    border-radius: 20px;
+
+}
+
+ 
+
+    hr.style-four:before {
+
+        display: block;
+
+        content: "";
+
+        height: 30px;
+
+        margin-top: -2px;
+
+        border-style: solid;
+
+        border-color: #5c6568;
+
+        border-width: 0 0 1px 0;
+
+        border-radius: 20px;
+
+    }
+
+ 
+
+ 
+
+hr.style-five {
+
+    overflow: visible; /* For IE */
+
+    height: 30px;
+
+    border-style: solid;
+
+    border-color: #5c6568;
+
+    border-width: 1px 0 0 0;
+
+    border-radius: 0;
+
+}
+
+ 
+
+    hr.style-five:before {
+
+        display: block;
+
+        content: "";
+
+        height: 30px;
+
+        margin-top: -10px;
+
+        border-style: solid;
+
+        border-color: #5c6568;
+
+        border-width: 1px 0 0 0;
+
+        border-radius: 0;
+
+    }
+
+ 
+
+/* Gradient color1 - color2 - color1 */
+
+ 
+
+hr.style-six {
+
+    border: 0;
+
+    height: 1px;
+
+    background: #333;
+
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+
+}
+
+ 
+
+/* Double-color dashed line */
+
+ 
+
+hr.style-seven {
+
+    border: 0;
+
+    border-bottom: 1px dashed #ccc;
+
+    background: #999;
+
+}
+
+ 
+
+/* Single-direction drop shadow */
+
+ 
+
+hr.style-eight {
+
+    height: 12px;
+
+    border: 0;
+
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+
+}
+
+ 
+
+/* Cloud */
+
+ 
+
+hr.style-nine {
+
+    border: 0;
+
+    height: 0; /* Firefox... */
+
+    box-shadow: 0 0 10px 1px black;
+
+}
+
+ 
+
+    hr.style-five:after { /* Not really supposed to work, but does */
+
+        content: "\00a0"; /* Prevent margin collapse */
+
+    }
+
+ 
+
+/* Glyph, by Harry Roberts */
+
+ 
+
+hr.style-ten {
+
+    overflow: visible; /* For IE */
+
+    padding: 0;
+
+    border: none;
+
+    border-top: medium double #333;
+
+    color: #333;
+
+    text-align: center;
+
+}
+
+ 
+
+    hr.style-ten:after {
+
+        content: "§";
+
+        display: inline-block;
+
+        position: relative;
+
+        top: -0.7em;
+
+        font-size: 1.5em;
+
+        padding: 0 0.25em;
+
+        background: #f8f9fa;
+
+    }
+    
+    .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ff0000;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #002c5c;
+  color: white;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #d2c8b3;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.flex1 {
+	padding: 1px;
+	margin:1px;
+	background: #002845;
+	color: white;
+	flex: 100px;
+}
+.flex2 {
+	padding: 10px;
+	margin:10px;
+	background: #a2aaad;
+	flex: 200px;
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.row{
+	display:flex;
+	flex-wrap: flex;
+}
+
+.column{
+
+	padding: 10%;
+	flex: 200px;
+	width: 25%;	
+}

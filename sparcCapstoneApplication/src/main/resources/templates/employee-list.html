@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- Tab Icon -->
+    <link rel="shortcut icon" href="img/Arvest White Logo (PNG).png" type="image/x-icon"/>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/> 
+    <!--link rel="stylesheet" type="text/css" href="css/bootstrap.css"/-->
+    
+    <!--Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="/css/customStyleSheet.css"/>
+
+<title>SPARC</title>
+</head>
+<body class="bg-arvestAltTan">
+<header>
+		  <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md fixed-top bg-arvestAltBlue navbar-border py-0">
+            <img src="/img/Arvest White Logo (PNG).png" class="navbar-brand img-fluid" href="https://www.arvest.com" alt="Arvest.com" width="115" />
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      	<a class="nav-link" href=" /">Home</a>
+      </li>
+      <li class="nav-item">
+      	<a class="nav-link" href="/projects">Projects</a>
+      </li>
+	  <li class="nav-item">
+	  	<a class="nav-link" href="/time">Time</a>
+	  </li>
+	  <li class="nav-item">
+	  	<a class="nav-link" href="/reports">Reports</a>
+	  </li>
+	  <li class="nav-item active">
+	  	<a class="nav-link" href="/admin">Admin</a>
+	  </li>
+    </ul>
+  </div>
+</nav>
+ 
+         <nav class="navbar bg-arvestBlue fixed-top-2 pl-0">
+            <div class="container justify-content-center">
+            	
+                <button id="submitForm" class="btn btn-arvestBlue py-1 mx-1">
+                <a href="/employees/add">
+                Add Employee</button>
+                </a>
+                <button id="clearForm" class="btn btn-arvestBlue py-1 mx-1">
+                <a href="/employees/edit">
+                Edit Employee</button>
+                </a>
+            </div>
+        </nav>
+        </header>
+    <h1> Employee List</h1>
+
+	<br/><br/>
+	<div>
+		<table border="1">
+			<tr>
+				<th>Id</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Current ID</th>
+				<th>Job Code</th>
+				<th>Is Manager?</th>
+				<th>Is Sponsor?</th>
+				<th>Is Supervisor</th>
+				<th>User id</th>
+			</tr>
+			<tr th:each="employee : ${jodi}">
+			<td th:utext="${employee.eid}"></td>
+			<td th:utext="${employee.efirst_name}"></td>
+			<td th:utext="${employee.elast_name}"></td>
+			<td th:utext="${employee.currentd_id}"></td>
+			<td th:utext="${employee.job_code}"></td>
+			<td th:utext="${employee.is_manager}"></td>
+			<td th:utext="${employee.is_sponsor}"></td>
+			<td th:utext="${employee.is_supervisor}"></td>
+			<td th:utext="${employee.e_userid}"></td>
+			</tr>
+		</table>
+	
+	
+	
+	</div>
+	
+	
+</body>
+</html>

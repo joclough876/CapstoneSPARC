@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> Job List!</h1>
+	<div>
+		<nobr>
+			<a th:href="@{/jobs/add}">Add Job</a>
+			<a th:href="@{/}">Back to Index</a>
+	
+		</nobr>
+	</div>
+	<br/><br/>
+	<div>
+		<table border="1">
+			<tr>
+				<th>Job Id</th>
+				<th>Job Code</th>
+				<th>Job Title</th>
+				<th>Manager Job Code</th>
+				<th>Manager Title</th>
+
+			</tr>
+			<tr th:each="job : ${jodi}">
+			<td th:utext="${job.jobid}"></td>
+			<td th:utext="${job.job_code}"></td>
+			<td th:utext="${job.job_title}"></td>
+			<td th:utext="${job.manager_code}"></td>
+			<td th:utext="${job.manager_title}"></td>
+			</tr>
+		</table>
+	
+	
+	
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> Job History!</h1>
+	<div>
+		<nobr>
+			<a th:href="@{/jobhistory/add}">Add Job History</a>
+			<a th:href="@{/}">Back to Index</a>
+	
+		</nobr>
+	</div>
+	<br/><br/>
+	<div>
+		<table border="1">
+			<tr>
+				<th>Id</th>
+				<th>Department ID</th>
+				<th>Employee ID</th>
+				<th>End Date</th>
+				<th>Start Date</th>
+				<th>Manager EID</th>
+				<th>Job Code</th>
+				<th>Is Current?</th>
+				<th>Status</th>
+			</tr>
+			<tr th:each="jobhistory : ${jodi}">
+			<td th:utext="${jobhistory.job_history_id}"></td>
+			<td th:utext="${jobhistory.departmentid}"></td>
+			<td th:utext="${jobhistory.employeeid}"></td>
+			<td th:utext="${jobhistory.enddate}"></td>
+			<td th:utext="${jobhistory.startdate}"></td>
+			<td th:utext="${jobhistory.managereid}"></td>
+			<td th:utext="${jobhistory.job_code}"></td>
+			<td th:utext="${jobhistory.is_current}"></td>
+			<td th:utext="${jobhistory.status}"></td>
+			</tr>
+		</table>
+	
+	
+	
+	</div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	
+    <!-- Tab Icon -->
+    <link rel="shortcut icon" href="img/Arvest White Logo (PNG).png" type="image/x-icon"/>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/> 
+    <!--link rel="stylesheet" type="text/css" href="css/bootstrap.css"/-->
+    
+    <!--Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="/css/customStyleSheet.css"/>
+
+<title>SPARC</title>
+</head>
+<body class="bg-arvestAltTan">
+<header>
+		  <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md fixed-top bg-arvestAltBlue navbar-border py-0">
+            <img src="/img/Arvest White Logo (PNG).png" class="navbar-brand img-fluid" href="https://www.arvest.com" alt="Arvest.com" width="115" />
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      	<a class="nav-link" href=" /">Home</a>
+      </li>
+      <li class="nav-item">
+      	<a class="nav-link" href="/projects">Projects</a>
+      </li>
+	  <li class="nav-item active">
+	  	<a class="nav-link" href="/time">Time</a>
+	  </li>
+	  <li class="nav-item">
+	  	<a class="nav-link" href="/reports">Reports</a>
+	  </li>
+	  <li class="nav-item">
+	  	<a class="nav-link" href="/admin">Admin</a>
+	  </li>
+    </ul>
+  </div>
+</nav>
+ </header>
+ 
+ 
+ <section id="main-body" class="container pt-5">
+
+        <!--Form Header-->
+        <div id="form-header" class="row">
+            <div class="col-12 pt-5 pb-1 text-center">
+                <h1 class="display-4 font-arvestBlue">SPARC</h1>
+            </div>
+        </div>
+
+        <!--Dividing Line-->
+        <div class="col-12">
+            <hr class="style-one mt-0" />
+        </div>
+
+        <!--Form Body-->
+        <form class="container pb-3"
+        th:action="${add} ? @{/time/add} : @{/time/add/{timeid}/edit(timeTimeid=${time.timeid})}"
+		      th:object="${time}" method="POST">
+            
+    
+                <!--Section Header-->
+                <div class="row justify-content-center pt-2">
+                    <div class="order-1 col-6 text-center">
+                        <h4 class="display-5 mb-3 font-arvestBlue">Time Entry</h4>
+                        <hr class="style-one" />
+                    </div>
+                </div>
+
+                <!--Tabular Section-->
+                <div class="row">
+                <table border="0">
+	          <tr th:if="${time.timeid}">
+	              <td th:utext="${time.timeid}">...</td>             
+</tr>
+</table>
+
+                    <!--Text Field-->
+                    <div class="col-12 col-sm-6 col-md-4 py-2">
+                        <label for="custName">
+                            Resource Name:
+                        </label>
+                        <input class="form-control" type="text" id="textExample" name="textExample" placeholder="example text here" th:field="*{time_eid}" required />
+                    </div>
+                                        <!--Subtle Diving Line-->
+                    <div class="col-12">
+                        <hr />
+                    </div>
+                    
+            
+            </div> <!--End Tabular Section-->
+      
+
+            <fieldset>
+                <!--Section Header-->
+                <section id="sType" class="row">
+                
+                
+                    <div class="col-12">
+                        <label for="selType">Entry Type:</label>
+                        <select class="form-control" id="selType" name="selType">
+                            <option value="">Select</option>
+                            <option>Admin-General</option>
+                            <option>Admin-Professional/Personal Development</option>
+                            <option>Admin-PTO/Holiday</option>
+                            <option>BAU-KTLO</option>
+                            <option>BAU-Other</option>
+                            <option>BAU-Servicing</option>
+                            <option>BAU-VIP</option>
+                            <option>Project</option>
+                        </select>
+
+                    </div>
+                </section>
+                <!--Tabular Section-->
+                <div class="row">
+
+                    <!--Text Field-->
+                    <div id="option1" class="col-12 col-sm-6 col-md-4 py-2 collapseField">
+                        <label for="custName">
+                            Project Name:
+                        </label>
+                        <input class="form-control" type="text" id="textExample" name="textExample" placeholder="example text here" th:field= "*{timeprojectid}"/>
+                    </div>
+
+                </div> <!--End Tabular Section-->
+            </fieldset>
+            
+                                <!--Subtle Diving Line-->
+                    <div class="col-12">
+                        <hr />
+                    </div>
+            
+                                <!--Date Field-->
+                    <div class="col-12 col-md-6">
+                        <label for="qstDateField">
+                           Date
+                        </label>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <input class="form-control" type="date" id="qstDateField" name="qstDateField" th:field= "*{timedate}" required />
+                    </div>
+                    
+                                                            <!--Subtle Diving Line-->
+                    <div class="col-12">
+                        <hr />
+                    </div>
+  
+                      <!--Text Field-->
+                    <div class="col-12 col-sm-6 col-md-4 py-2">
+                        <label for="custName">
+                         Hours:
+                        </label>
+                        <input class="form-control" type="text" id="textExample" name="textExample" placeholder="example text here" th:field="*{timespent}"required />
+                    </div>            
+            
+            
+            
+
+                <input type="submit" th:value="${add} ? 'Add Entry' : 'Update'" />
+        
+                    
+                    
+          
+        </form>
+    </section>  
+
+
+
+    <!-- JS Needed for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!--Custom JS-->
+    <script type="text/javascript" src="/js/formTemplate.js"></script>
+</body>
+
+</html>
